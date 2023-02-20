@@ -28,3 +28,5 @@ Even in image I do validation like image must be in format of png/jpg/jpeg/svg a
 And it is mentioned that seacrching/filter will only be done using Product Id. so if we search using other than Product id then no data will be showing.
 Compare with second image from top, there is five entries and after searching with Product id
 ![Screenshot from 2023-02-20 20-34-36](https://user-images.githubusercontent.com/122250114/220141933-c4f93dbc-575f-442d-ac27-eacbcc373acb.png)
+
+And it is also mentioned that sorting will be done by only Product Id, Product Name, Price. So we can do sorting using these first three column.
