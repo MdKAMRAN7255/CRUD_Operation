@@ -176,7 +176,12 @@ function addData() {
             dataList = JSON.parse(localStorage.getItem("dataList"));
         }
         if(dataList.some((v) =>{return v.pname == pname})){
-            alert("Item is already available")
+                const toastLiveExample = document.getElementById('liveToast');
+                const toast = new bootstrap.Toast(toastLiveExample);
+                document.getElementById('Success_notice').style.color="red";
+                document.getElementById('Success_notice').innerHTML="Warning Message";
+                document.getElementById('Success_message').innerHTML="Same Product is already in Entries";
+                toast.show();
         }
         else{
             dataList.push({
@@ -188,7 +193,10 @@ function addData() {
             });
             localStorage.setItem("dataList", JSON.stringify(dataList));
                 const toastLiveExample = document.getElementById('liveToast');
-                const toast = new bootstrap.Toast(toastLiveExample)
+                const toast = new bootstrap.Toast(toastLiveExample);
+                document.getElementById('Success_notice').style.color="Green";
+                document.getElementById('Success_notice').innerHTML="Successfull Message";
+                document.getElementById('Success_message').innerHTML="Your Data is added successfully";
                 toast.show();
         }
         showData();
