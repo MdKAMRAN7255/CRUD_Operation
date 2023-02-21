@@ -17,6 +17,10 @@ Since We have to make the product id unique I used **Date.now();** method which 
 And when we perform update Product ID will not be changed as every product has only one unique id and it shuold always remain same.
 
 We can't add duplicate Product i.e., we can not add same product if it is already in dataList(local storage) as I use product name for this validation.
+![Screenshot from 2023-02-21 12-49-35](https://user-images.githubusercontent.com/122250114/220275668-ccfd41f0-5fc5-4eac-9349-f4d4ebb12305.png)
+
+And on successfull submission of form it shows a message like this
+![Screenshot from 2023-02-21 12-50-34](https://user-images.githubusercontent.com/122250114/220275916-d7098af7-6310-4c59-b058-6e930d41ddda.png)
 
 As we don't have perfect range for Price. So I choose a price length of nine digit. And price should not start with zero.
 
