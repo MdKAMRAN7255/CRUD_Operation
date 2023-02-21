@@ -119,6 +119,8 @@ function descriptionValidation() {
 
 // Crud operation start from here
 function showData() {
+    const viewTable = document.getElementById("viewTable");
+    if (viewTable == null) return;
     let dataList;
     if (localStorage.getItem("dataList") == null) {
         dataList = [];
@@ -140,10 +142,13 @@ function showData() {
         result += '<td><button onclick="updateData(' + index + ')" class="btn btn-primary">Update</button><button onclick="deleteData(' + index + ')" class="btn btn-danger mt-2 mt-xl-0 mx-xl-2">Delete</button></td>';
         result += "</tr>";
     });
-    document.querySelector("#myTablebody tbody").innerHTML = result;
+    viewTable.innerHTML = result;
+
 }
 
 document.onload = showData();
+const form = document.getElementById("myform");form.addEventListener("submit", e => {  e.preventDefault();  form.reset();});
+
 // program to convert first letter of a string to uppercase
 function capitalizeFirstLetter(str) {
 
@@ -182,10 +187,13 @@ function addData() {
                 pdescription: pdescription,
             });
             localStorage.setItem("dataList", JSON.stringify(dataList));
-            alert("Data Has been added successfully");
+                const toastLiveExample = document.getElementById('liveToast');
+                const toast = new bootstrap.Toast(toastLiveExample)
+                toast.show();
         }
         showData();
     });
+            
 }
 function deleteData(index) {
     let dataList;
