@@ -164,7 +164,7 @@ function addData() {
     let image1 = document.getElementById('file');
     let pdescription = document.getElementById('description').value;
     pdescription = capitalizeFirstLetter(pdescription);
-    document.getElementById('imageWarning').innerHTML = "";
+    document.getElementById('imageWarning').innerHTML = " ";
 
     const fr = new FileReader();
     fr.readAsDataURL(image1.files[0]);
