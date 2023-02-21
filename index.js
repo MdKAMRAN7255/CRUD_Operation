@@ -164,7 +164,7 @@ function addData() {
     let image1 = document.getElementById('file');
     let pdescription = document.getElementById('description').value;
     pdescription = capitalizeFirstLetter(pdescription);
-    document.getElementById('imageWarning').innerHTML = " ";
+    
 
     const fr = new FileReader();
     fr.readAsDataURL(image1.files[0]);
@@ -193,12 +193,13 @@ function addData() {
                 pdescription: pdescription,
             });
             localStorage.setItem("dataList", JSON.stringify(dataList));
-                const toastLiveExample = document.getElementById('liveToast');
-                const toast = new bootstrap.Toast(toastLiveExample);
-                document.getElementById('Success_notice').style.color="Green";
-                document.getElementById('Success_notice').innerHTML="Successfull Message";
-                document.getElementById('Success_message').innerHTML="Your Data is added successfully";
-                toast.show();
+            const toastLiveExample = document.getElementById('liveToast');
+            const toast = new bootstrap.Toast(toastLiveExample);
+            document.getElementById('Success_notice').style.color="Green";
+            document.getElementById('Success_notice').innerHTML="Successfull Message";
+            document.getElementById('Success_message').innerHTML="Your Data is added successfully";
+            toast.show();
+            document.getElementById('imageWarning').innerHTML = "";
         }
         showData();
     });
