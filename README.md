@@ -32,4 +32,4 @@ Compare with second image from top, there is five entries and after searching wi
 And it is also mentioned that sorting will be done by only Product Id, Product Name, Price. So we can do sorting using these first three column.
 
 All the code file is in branch: Crud_Operation
-And hosted link of the website is:- https://gregarious-dusk-ba20ab.netlify.app/index.html
+And hosted link of the website is:- https://mdkamran7255.github.io/CRUD_Operation/
